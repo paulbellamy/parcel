@@ -19,6 +19,7 @@ const DEP_LOCS = [
   ['browser_action', 'default_popup'],
   ['page_action', 'default_icon'],
   ['page_action', 'default_popup'],
+  ['background', 'page'],
   ['background', 'scripts'],
   ['chrome_url_overrides'],
   ['devtools_page'],
