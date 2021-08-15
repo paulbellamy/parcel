@@ -1,5 +1,5 @@
 {
-  "name": "@parcel/transformer-webextension",
+  "name": "@pyrhho/parcel-transformer-webextension",
   "version": "2.0.0-rc.0",
   "license": "MIT",
   "publishConfig": {
