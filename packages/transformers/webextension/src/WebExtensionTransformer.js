@@ -231,14 +231,17 @@ async function collectDependencies(
     if (!program.background) {
       program.background = {};
     }
-    if (!program.background.scripts) {
-      program.background.scripts = [];
+    if (!program.background.page) {
+      // TODO: If we have a page, inject the dependency there instead.
+      if (!program.background.scripts) {
+        program.background.scripts = [];
+      }
+      program.background.scripts.push(
+        asset.addURLDependency('./runtime/autoreload-bg.js', {
+          resolveFrom: __filename,
+        }),
+      );
     }
-    program.background.scripts.push(
-      asset.addURLDependency('./runtime/autoreload-bg.js', {
-        resolveFrom: __filename,
-      }),
-    );
   }
 }
 
